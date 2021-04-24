@@ -13,35 +13,19 @@ function Booklist(){
       < Book/>
       < Book/>
       < Book/>
-      < Book/>
-      < Book/>
-      < Book/>
-      < Book/>
-      < Book/>
-      < Book/>
-      < Book/>
      </section>
     </div>
   
 }
-
+const author='by Paulo Coelho';
 const Book=() =>{
+  const title= 'The Alchemist, 25th Anniversary: A Fable About Following Your Dream';
   return <div className='book'>
-    <Image/> 
-    <Title />
-    by <Author />
+    <img src='https://m.media-amazon.com/images/I/51kcX5PpaZL._AC_UY327_FMwebp_QL65_.jpg'></img> 
+    <h3>{title}</h3>
+    <h4>{author.toUpperCase()}</h4>
     </div>
 }
 
-const Image=()=>{
-return <img src='https://m.media-amazon.com/images/I/51kcX5PpaZL._AC_UY327_FMwebp_QL65_.jpg'></img>
-}
 
-const Title=()=>{
-return <h3>The Alchemist, 25th Anniversary: A Fable About Following Your Dream</h3>
-}
-
-const Author=()=>{
-return <h4> Paulo Coelho</h4>
-}
 reactDom.render(<Booklist/>, document.getElementById('root'));
