@@ -1,30 +1,32 @@
 import React from 'react'
 import reactDom from 'react-dom'
 
-
+import './index.css'
 function Booklist(){
   return <div>
     <h1>Booklist</h1>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
-     < Book/>
+     <section className='booklist'>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+      < Book/>
+     </section>
     </div>
   
 }
 
 const Book=() =>{
-  return <div>
+  return <div className='book'>
     <Image/> 
     <Title />
     by <Author />
