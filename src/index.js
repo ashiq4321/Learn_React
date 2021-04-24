@@ -21,7 +21,10 @@ function Booklist(){
      <section className='booklist'>
       < Book img={firstBook.img}
             title={firstBook.title}
-            author={firstBook.author}/>
+            author={firstBook.author}
+      >
+        <p>Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, of recognizing opportunity and learning to read the omens strewn along life's path, and, most importantly, to follow our dreams.</p>
+      </Book>
       < Book img={secondBook.img}
             title={secondBook.title}
             author={secondBook.author}/>
@@ -29,12 +32,13 @@ function Booklist(){
     </div>
   
 }
-const Book=({img, title, author}) =>{
+const Book=({img, title, author, children}) =>{
   //const {img, title, author} =props;
   return <div className='book'>
     <img src={img}></img> 
     <h3>{title}</h3>
     <h4>{author}</h4>
+    {children}
     </div>
 }
 
