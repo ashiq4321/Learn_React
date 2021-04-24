@@ -3,6 +3,12 @@ import reactDom from 'react-dom'
 
 import './index.css'
 
+const names =['ayesha', 'tasin', 'tuhin'];
+ console.log(names)
+ const newNames=names.map((name)=>{
+   return <h1>{name}</h1>;
+ });
+
 //setup object
 const firstBook={
   img: 'https://m.media-amazon.com/images/I/51kcX5PpaZL._AC_UY327_FMwebp_QL65_.jpg',
@@ -17,14 +23,13 @@ const secondBook={
 }
 function Booklist(){
   return <div>
+    {newNames} <br></br>
     <h1>Booklist</h1>
      <section className='booklist'>
       < Book img={firstBook.img}
             title={firstBook.title}
             author={firstBook.author}
-      >
-        <p>Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, of recognizing opportunity and learning to read the omens strewn along life's path, and, most importantly, to follow our dreams.</p>
-      </Book>
+      ></Book>
       < Book img={secondBook.img}
             title={secondBook.title}
             author={secondBook.author}/>
@@ -32,13 +37,12 @@ function Booklist(){
     </div>
   
 }
-const Book=({img, title, author, children}) =>{
+const Book=({img, title, author}) =>{
   //const {img, title, author} =props;
   return <div className='book'>
     <img src={img}></img> 
     <h3>{title}</h3>
     <h4>{author}</h4>
-    {children}
     </div>
 }
 
