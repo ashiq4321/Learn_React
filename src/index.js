@@ -9,6 +9,6 @@ import reactDom from 'react-dom'
   
 } */
  const Greeting=()=>{
-   return React.createElement('h1',{},'hello');
+   return React.createElement('div',{},React.createElement('h1','{}','hello'));
  }
 reactDom.render(<Greeting/>, document.getElementById('root'));
