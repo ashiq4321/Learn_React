@@ -29,12 +29,12 @@ function Booklist(){
     </div>
   
 }
-const Book=(props) =>{
-  console.log(props)
+const Book=({img, title, author}) =>{
+  //const {img, title, author} =props;
   return <div className='book'>
-    <img src={props.img}></img> 
-    <h3>{props.title}</h3>
-    <h4>{props.author}</h4>
+    <img src={img}></img> 
+    <h3>{title}</h3>
+    <h4>{author}</h4>
     </div>
 }
 
